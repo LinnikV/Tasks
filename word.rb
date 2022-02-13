@@ -1,3 +1,5 @@
+public
+
 def word (w)
   for i in 1..30
     case i
@@ -12,4 +14,3 @@ def word (w)
     end
   end
 end
-word("ruby")

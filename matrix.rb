@@ -1,6 +1,7 @@
-def matrix(x)
-  for i in 1..x
-    for j in 1..x
+public
+def matrix(m)
+  for i in 1..m
+    for j in 1..m
       if i==j
         print "1"
       else
@@ -10,6 +11,4 @@ def matrix(x)
     puts
   end
 end
-print("Введите размер матрицы: ")
-x =gets.to_i
-matrix(x)
+

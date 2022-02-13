@@ -1,7 +1,8 @@
-def circle(x)
-  for i in 0..x
-    for j in 0..x
-      if ((i-x/2)**2+(j-x/2)**2)<=(x**2)/4
+public
+def circle(r)
+  for i in 0..r
+    for j in 0..r
+      if ((i-r/2)**2+(j-r/2)**2)<=(r**2)/4
         print "*"
       else
         print" "
@@ -10,6 +11,4 @@ def circle(x)
     puts
   end
 end
-print("Введите диаметр: ")
-x =gets.to_i
-circle(x)
+

@@ -1,3 +1,4 @@
+public
 def form(str, type)
   case type
   when :camel
@@ -8,7 +9,7 @@ def form(str, type)
     puts str.split.join('-')
   end
 end
-str = 'i love ruby'
-form(str, :camel)
-form(str, :underscore)
-form(str, :css)
+#str = 'i love ruby'
+#form(str, :camel)
+#form(str, :underscore)
+#form(str, :css)
