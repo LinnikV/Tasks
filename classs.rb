@@ -7,7 +7,6 @@ require_relative 'get_all'
 
 
 class Tasks
-
     attr_accessor :x
 
     def initialize( x )
@@ -33,7 +32,7 @@ class Tasks
     when 4
         hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
          print("key9: ")
-         Tasks.find(hash, :key9)
+        Tasks.find(hash, :key9)
     when 5
         print("Введите строку: ")
          x = gets.to_s
@@ -60,10 +59,10 @@ class Tasks
             p $new_arr
             when 3
             Tasks.get_all(arr, Hash)
-             p $new_arr
+            p $new_arr
             when 4
-               Tasks.get_all(arr, Array)
-              p $new_arr
-            end
+            Tasks.get_all(arr, Array)
+            p $new_arr
+         end
     end
 end

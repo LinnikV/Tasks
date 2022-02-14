@@ -1,16 +1,4 @@
 public
-
 def word (w)
-  for i in 1..30
-    case i
-    when 10
-      puts w
-    when 20
-      puts w
-    when 25
-      puts w
-    else
-      puts "<3"+w
-    end
-  end
+  30.times { |v| puts [10, 20, 25].include?(v) ? '<3' + w : w}
 end
