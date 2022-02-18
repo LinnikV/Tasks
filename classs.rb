@@ -6,7 +6,7 @@ require_relative 'form'
 require_relative 'get_all'
 
 
-class Tasks
+class Print_tasks
     attr_accessor :x
 
     def initialize( x )
@@ -15,24 +15,24 @@ class Tasks
 
 
     print("Введите номер задания 1..6: ")
-    n = gets.to_i
-    case n
+    x = gets.to_i
+    case x
     when 1
        print("Введите строку: ")
-        x = gets.to_s
-        p Tasks.word(x)
+       w = gets.chomp
+        p word(w)
     when 2
         print("Введите радиус круга: ")
-        x = gets.to_i
-        p Tasks.circle(x)
+        r = gets.to_i
+        p circle(r)
     when 3
         print("Введите размер матрицы: ")
-         x = gets.to_i
-        p Tasks.matrix(x)
+        i = gets.to_i
+        p matrix(i)
     when 4
         hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
          print("key9: ")
-        Tasks.find(hash, :key9)
+         find(hash, :key9)
     when 5
         print("Введите строку: ")
          x = gets.to_s
@@ -40,11 +40,11 @@ class Tasks
          s = gets.to_i
            case s
            when 1
-            Tasks.form(x, :camel)
+            form(x, :camel)
            when 2
-             Tasks.form(x, :underscore)
+             form(x, :underscore)
            when 3
-             Tasks.form(x, :css)
+             form(x, :css)
            end
     when 6
          arr = [[1, 2, 3, 4, '1'], ['2', '5', '10'], [111, 222, 333, 444], ['i', 'love', 'ruby'], { key: 'value' }, [[['text', 100_000]]]]
@@ -52,16 +52,16 @@ class Tasks
          t = gets.to_i
          case t
             when 1
-            Tasks.get_all(arr, Integer)
+            get_all(arr, Integer)
             p $new_arr
             when 2
-            Tasks.get_all(arr, String)
+            get_all(arr, String)
             p $new_arr
             when 3
-            Tasks.get_all(arr, Hash)
+            get_all(arr, Hash)
             p $new_arr
             when 4
-            Tasks.get_all(arr, Array)
+            get_all(arr, Array)
             p $new_arr
          end
     end
